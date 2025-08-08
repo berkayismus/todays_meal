@@ -13,6 +13,14 @@ class User extends Equatable {
     required this.createdAt,
   });
 
+  const User.empty()
+      : this(
+          name: 'name',
+          avatar: 'avatar',
+          createdAt: 'createdAt',
+          id: 'id',
+        );
+
   @override
   List<Object> get props => [id, name, avatar, createdAt];
 }
